@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login page</title>
+</head>
+<body>
+    <div class="container" id="container" style="margin-left:400px; margin-top:150px">
+        <div class="form-sign-up-container">
+            <form id="registrationForm" style="height: max-content;">
+                <h1>Create an Account</h1>
+                <span>or use your email for registration</span>
+                <div class="input-field"><i class="fa fa-user"></i>
+                    <input type="text" placeholder="Username" name="Username" id="username">
+                    <span id="usernameError" style="color: red;"></span>
+                </div>
+                <div class="input-field"><i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Email" name="Email" id="email">
+                    <span id="emailError" style="color: red;"></span>
+                </div>
+                <div class="input-field"><i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" name="Password" id="password">
+                    <span id="passwordError" style="color: red;"></span>
+                </div>
+                <button type="button" onclick="validateRegistration()">Sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateRegistration() {
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Perform validation checks here
+
+            // Check if user is already registered (example condition)
+            var isUserRegistered = false; // Assume user is not registered for demonstration
+
+            if (isUserRegistered) {
+                alert('User is already registered. Redirecting to login page.');
+                window.location.href = 'med_log.html'; // Redirect to login page
+            } else {
+                // Continue with registration process
+                // Add code to submit form or perform further actions
+            }
+        }
+    </script>
+
+</body>
+</html>
